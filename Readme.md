@@ -70,13 +70,14 @@ sudo qemu-system-x86_64 \
 # "Please remove the installation medium, then press ENTER"
 ```
 
-Now we can re-run qemu without `-cdrom ${IMG}` and we can't read TPM measurement from `/sys/kernel/security/tpm0/ascii_bios_measurements
+Now we can re-run qemu without `-cdrom ${IMG}` and we can't read TPM measurement from `/sys/kernel/security/tpm0/ascii_bios_measurements`
 
 ![OVMF - TPM Measurements](./ovmf_measurements.png)
 ![OVMF - log](./ovmf_logs.txt)
 
 ## Seabios
 ```
+swtpm socket --tpmstate dir=${VMDIR}/mytpm0 --ctrl type=unixio,path=${VMDIR}/mytpm0/swtpm-sockw &
 qemu-img create -f qcow2 ubuntu.qcow 20G
 sudo qemu-system-x86_64 \
      -cpu host \
@@ -89,7 +90,7 @@ sudo qemu-system-x86_64 \
 # Install and reboot and when the following message appear then stop QEMU
 # "Please remove the installation medium, then press ENTER"
 ```
-Now we can re-run qemu without `-cdrom ${IMG}` and we can read TPM measurement from `/sys/kernel/security/tpm0/ascii_bios_measurements
+Now we can re-run qemu without `-cdrom ${IMG}` and we can read TPM measurement from `/sys/kernel/security/tpm0/ascii_bios_measurements`
 
 ![Seabios - TPM Measurements](./seabios_measurements.png)
 ![Seabios - log](./seabios_logs.txt)
