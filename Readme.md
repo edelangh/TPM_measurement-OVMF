@@ -97,7 +97,7 @@ Now we can re-run qemu without `-cdrom ${IMG}` and we can read TPM measurement f
 
 ## Analyses
 
-There is clealy a bit differences between this logs but I don't know why OVMF don't have TPM Measurements
+There is clearly a big differences between this logs but I don't know why OVMF don't have TPM Measurements
 
 # Next steps
 
