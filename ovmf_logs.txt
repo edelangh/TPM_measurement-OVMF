@@ -1,0 +1,2829 @@
+ Ctrl Cmd: length 4
+ 00 00 00 10 
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+ SWTPM_IO_Read: length 10
+ 80 01 00 00 00 0A 00 00 01 81 
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 09 
+ SWTPM_IO_Read: length 10
+ 00 C1 00 00 00 0A 00 00 00 F1 
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 09 
+ Ctrl Cmd: length 4
+ 00 00 00 01 
+ Ctrl Rsp: length 8
+ 00 00 00 00 00 00 7F FF 
+ Ctrl Cmd: length 4
+ 00 00 00 0E 
+     TPM_Global_Delete:
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+ Ctrl Cmd: length 8
+ 00 00 00 11 00 00 00 00 
+ Ctrl Rsp: length 16
+ 00 00 00 00 00 00 10 00 00 00 0C 00 00 00 10 00 
+ Ctrl Cmd: length 4
+ 00 00 00 0E 
+     TPM_Global_Delete:
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+ Ctrl Cmd: length 8
+ 00 00 00 11 00 00 10 00 
+ Ctrl Rsp: length 16
+ 00 00 00 00 00 00 10 00 00 00 0C 00 00 00 10 00 
+ Ctrl Cmd: length 8
+ 00 00 00 02 00 00 00 00 
+     TPM_Global_Delete:
+    TPM_MainInit: Initialize the TPM to host interface
+    TPM_MainInit: Initialize the TPM crypto support
+    TPM_Crypto_Init: OpenSSL library 1010106f
+    TPM_MainInit: Initialize the TPM NVRAM
+    TPM_MainInit: Run common limited self tests
+     TPM_LimitedSelfTestCommon:
+      TPM_Uint64_Test
+     TPM_Uint64_Store:
+      TPM_Uint64_ConvertFrom: sec 12345678, usec 781234
+       TPM_Uint64_ConvertFrom: Result usec 12345678781234, b3a73cc5b32
+       TPM_Uint64_ConvertFrom: Upper 2874, b3a
+       TPM_Uint64_ConvertFrom: Lower 1942772530, 73cc5b32
+       TPM_Sbuffer_Append: data_length 4, growing from 0 to 2048
+     TPM_Uint64_Load:
+       TPM_Uint64_ConvertTo: Upper 2874, b3a
+       TPM_Uint64_ConvertTo: Lower 1942772530, 73cc5b32
+       TPM_Uint64_ConvertTo: Result usec 12345678781234, b3a73cc5b32
+      TPM_Uint64_ConvertTo: sec 12345678, usec 781234
+     TPM_CryptoTest:
+     TPM_CryptoTest: Test 1 - SHA1 one part
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 56 bytes
+     TPM_SHA1Update: length 56
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 84 98 3e 44
+     TPM_SHA1Delete:
+     TPM_CryptoTest: Test 2 - SHA1 two parts
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 16 bytes
+     TPM_SHA1Update: length 16
+      TPM_SHA1_valist: Digesting 40 bytes
+     TPM_SHA1Update: length 40
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 84 98 3e 44
+     TPM_SHA1Delete:
+     TPM_CryptoTest: Test 3 - HMAC generate - one part
+     TPM_HMAC_Generate:
+     TPM_HMAC_Generatevalist:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 50 bytes
+     TPM_SHA1Update: length 50
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 70 2b d1 2f
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 12 5d 73 42
+     TPM_SHA1Delete:
+     TPM_HMAC_Generatevalist: HMAC 12 5d 73 42
+     TPM_CryptoTest: Test 4 - HMAC generate - two parts
+     TPM_HMAC_Generate:
+     TPM_HMAC_Generatevalist:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 30 bytes
+     TPM_SHA1Update: length 30
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 70 2b d1 2f
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 12 5d 73 42
+     TPM_SHA1Delete:
+     TPM_HMAC_Generatevalist: HMAC 12 5d 73 42
+     TPM_CryptoTest: Test 4 - HMAC check - two parts
+     TPM_HMAC_Check:
+     TPM_HMAC_Generatevalist:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 30 bytes
+     TPM_SHA1Update: length 30
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 70 2b d1 2f
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 64 bytes
+     TPM_SHA1Update: length 64
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 12 5d 73 42
+     TPM_SHA1Delete:
+     TPM_HMAC_Generatevalist: HMAC 12 5d 73 42
+      TPM_HMAC_Check: Calculated 12 5d 73 42
+      TPM_HMAC_Check: Received   12 5d 73 42
+     TPM_CryptoTest: Test 5 - OAEP add and check
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest f7 7d 67 a7
+     TPM_SHA1Delete:
+     TPM_RSA_padding_add_PKCS1_OAEP: fLen 8 emLen 256
+      TPM_RSA_padding_add_PKCS1_OAEP: from 00 01 02 03
+      TPM_RSA_padding_add_PKCS1_OAEP: pHash f7 7d 67 a7
+      TPM_RSA_padding_add_PKCS1_OAEP: seed f0 f1 f2 f3
+     TPM_MGF1: Output length 236
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest f6 ef c5 48
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest af 40 8c 64
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 40 bc 94 e1
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest b2 15 7d 75
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest a5 5c ac d9
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest e6 b7 dc 5e
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 3a 3e e9 ad
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 02 1a 33 0c
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 9a 45 9c ad
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 5e 7b 19 3b
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 20 d1 69 a8
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest a9 49 c4 6b
+     TPM_SHA1Delete:
+     TPM_MGF1: Output length 20
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 236 bytes
+     TPM_SHA1Update: length 236
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest cc 38 2a cb
+     TPM_SHA1Delete:
+      TPM_RSA_padding_add_PKCS1_OAEP: em 3c c9 d8 38
+     TPM_RSA_padding_check_PKCS1_OAEP: emLen 256 tSize 8
+      TPM_RSA_padding_check_PKCS1_OAEP: em 3c c9 d8 38
+     TPM_MGF1: Output length 20
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 236 bytes
+     TPM_SHA1Update: length 236
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest cc 38 2a cb
+     TPM_SHA1Delete:
+     TPM_MGF1: Output length 236
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest f6 ef c5 48
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest af 40 8c 64
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 40 bc 94 e1
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest b2 15 7d 75
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest a5 5c ac d9
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest e6 b7 dc 5e
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 3a 3e e9 ad
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 02 1a 33 0c
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 9a 45 9c ad
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 5e 7b 19 3b
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 20 d1 69 a8
+     TPM_SHA1Delete:
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 4 bytes
+     TPM_SHA1Update: length 4
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest a9 49 c4 6b
+     TPM_SHA1Delete:
+      TPM_RSA_padding_check_PKCS1_OAEP: tLen 8 
+      TPM_RSA_padding_check_PKCS1_OAEP: to 00 01 02 03
+      TPM_RSA_padding_check_PKCS1_OAEP: pHash f7 7d 67 a7
+      TPM_RSA_padding_check_PKCS1_OAEP: seed f0 f1 f2 f3
+     TPM_CryptoTest: Test 6 - Symmetric key with PKCS pad test
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_GenerateKey:
+     TPM_Random: Requesting 16 bytes
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 26 04 94 43
+     TPM_Random: Requesting 64 bytes
+     TPM_SymmetricKeyData_Encrypt: Length 64
+      TPM_SymmetricKeyData_Encrypt: Padded length 80 pad length 16
+      TPM_SymmetricKeyData_Encrypt: Input 1c 6f 88 04
+      TPM_SymmetricKeyData_Encrypt: Output 7f 92 ab 51
+     TPM_SymmetricKeyData_Decrypt: Length 80
+      TPM_SymmetricKeyData_Decrypt: Input 7f 92 ab 51
+      TPM_SymmetricKeyData_Decrypt: Output 1c 6f 88 04
+     TPM_SymmetricKeyData_Decrypt: Pad length 16
+     TPM_CryptoTest: Test 7 - Symmetric key with CTR mode
+     TPM_Random: Requesting 20 bytes
+     TPM_Random: Requesting 20 bytes
+     TPM_Random: Requesting 20 bytes
+     TPM_SymmetricKeyData_CtrCrypt: data_size 20
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_SetKey:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 8d 3e 52 19
+      TPM_SymmetricKeyData_CtrCrypt: Calling AES in CTR mode
+      TPM_SymmetricKeyData_CtrCrypt: CTR 2f 41 39 68
+      TPM_AES_Ctr128_encrypt:
+       TPM_AES_Ctr128_encrypt: data_size 20
+       TPM_AES_Ctr128_encrypt: data_size 4
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_CtrCrypt: data_size 20
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_SetKey:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 8d 3e 52 19
+      TPM_SymmetricKeyData_CtrCrypt: Calling AES in CTR mode
+      TPM_SymmetricKeyData_CtrCrypt: CTR 2f 41 39 68
+      TPM_AES_Ctr128_encrypt:
+       TPM_AES_Ctr128_encrypt: data_size 20
+       TPM_AES_Ctr128_encrypt: data_size 4
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+      TPM_Secret_Compare:
+     TPM_CryptoTest: Test 8 - Symmetric key with OFB mode
+     TPM_Random: Requesting 20 bytes
+     TPM_Random: Requesting 20 bytes
+     TPM_Random: Requesting 20 bytes
+     TPM_SymmetricKeyData_OfbCrypt: data_size 20
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_SetKey:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 17 28 ee 12
+      TPM_SymmetricKeyData_OfbCrypt: Calling AES in OFB mode
+      TPM_SymmetricKeyData_OfbCrypt: IV 2e 2e bf 92
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_OfbCrypt: data_size 20
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_SetKey:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 17 28 ee 12
+      TPM_SymmetricKeyData_OfbCrypt: Calling AES in OFB mode
+      TPM_SymmetricKeyData_OfbCrypt: IV 2e 2e bf 92
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+      TPM_Secret_Compare:
+     TPM_CryptoTest: Test 9 - RSA encrypt with OAEP padding
+     TPM_RSAGenerateKeyPair:
+     TPM_LoadLong:
+     TPM_LoadLong: Result 00010001
+      TPM_RSAGenerateKeyPair: num_bits 2048 exponent 00010001
+       TPM_bn2binMalloc: padBytes 256
+       TPM_bn2binArray: size 256
+       TPM_bn2binArray: numBytes in bignum 256
+       TPM_bn2binMalloc: padBytes 128
+       TPM_bn2binArray: size 128
+       TPM_bn2binArray: numBytes in bignum 128
+       TPM_bn2binMalloc: padBytes 128
+       TPM_bn2binArray: size 128
+       TPM_bn2binArray: numBytes in bignum 128
+       TPM_bn2binMalloc: padBytes 256
+       TPM_bn2binArray: size 256
+       TPM_bn2binArray: numBytes in bignum 256
+      TPM_RSAGenerateKeyPair: length of n,p,q,d = 256 / 128 / 128 / 256
+     TPM_RSAPublicEncrypt: Input data size 20
+     TPM_RSAPrivateDecrypt:
+      TPM_RSAPrivateDecrypt: Decrypt data 84 98 3e 44
+     TPM_CryptoTest: Test 10 - RSA encrypt with PKCS padding
+     TPM_RSAPublicEncrypt: Input data size 20
+     TPM_RSAPrivateDecrypt:
+      TPM_RSAPrivateDecrypt: Decrypt data 84 98 3e 44
+     TPM_CryptoTest: Test 11a - RSA sign with PKCS1v15 padding
+     TPM_RSASign:
+     TPM_RSASignSHA1:
+     TPM_RSAVerify:
+     TPM_RSAVerifySHA1:
+     TPM_Crypto_TestSpecific: Test 1 - SHA1 two parts
+     TPM_Sha1Context_Store: OpenSSL
+      TPM_Sha1Context_Store: Storing context
+       TPM_Sbuffer_Append: data_length 1, growing from 0 to 2048
+     TPM_Sha1Context_Load: OpenSSL
+     TPM_Sha1Context_Load: contextPresent 1
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+     TPM_GetTimeOfDay: 1632069482 sec 211101 usec
+    TPM_MainInit: Initializing global TPM 0
+    TPM_Global_Init: TPMs 1
+    TPM_Global_Init: Initializing TPM_PERMANENT_FLAGS
+     TPM_PermanentFlags_Init:
+    TPM_Global_Init: Initializing TPM_STCLEAR_FLAGS
+     TPM_StclearFlags_Init:
+    TPM_Global_Init: Initializing TPM_STANY_FLAGS
+     TPM_StanyFlags_Init:
+    TPM_Global_Init: Initializing TPM_PERMANENT_DATA
+     TPM_PermanentData_Init:
+      TPM_PermanentData_Init: revMajor 12 revMinor 9e
+      TPM_PermanentData_Zero:
+      TPM_Secret_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+      TPM_Nonce_Init:
+     TPM_Pubkey_Init:
+     TPM_KeyParms_Init:
+     TPM_Key_Init:
+     TPM_StructVer_Init:
+     TPM_KeyParms_Init:
+     TPM_Key_Init:
+     TPM_StructVer_Init:
+     TPM_KeyParms_Init:
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_CounterValue_Init:
+      TPM_Secret_Init:
+     TPM_PCRAttributes_Init:
+     TPM_OrdinalAuditStatus_Init:
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000000d
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000010
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000001f
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000028
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000002a
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000002b
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000005b
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000005c
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000005d
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000005e
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000006e
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000006f
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000070
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000071
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000072
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000073
+     TPM_OrdinalTable_GetAuditable: Ordinal 00000079
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000007a
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000007c
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000007d
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000007e
+     TPM_OrdinalTable_GetAuditable: Ordinal 0000008d
+     TPM_FamilyTable_Init: Qty 16
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_DelegateTable_Init: Qty 4
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_SymmetricKeyData_New:
+     TPM_SymmetricKeyData_Init:
+    TPM_Global_Init: Initializing TPM_STCLEAR_DATA
+     TPM_StclearData_Init:
+      TPM_Nonce_Init:
+    TPM_StclearData_Init: Initializing PCR's
+     TPM_PCRs_Init:
+      TPM_PCR_Init: pcrIndex 0
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 1
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 2
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 3
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 4
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 5
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 6
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 7
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 8
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 9
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 10
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 11
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 12
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 13
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 14
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 15
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 16
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 17
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 18
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 19
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 20
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 21
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 22
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 23
+      TPM_Digest_Init:
+     TPM_StclearData_SessionInit:
+     TPM_AuthSessions_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_TransportSessions_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessions_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_ContextList_Init:
+      TPM_Digest_Init:
+    TPM_Global_Init: Initializing TPM_STANY_DATA
+     TPM_StanyData_Init:
+     TPM_CurrentTicks_Init:
+     TPM_Uint64_Init:
+      TPM_Nonce_Init:
+     TPM_Uint64_Init:
+     TPM_CurrentTicks_Start:
+     TPM_Uint64_Init:
+     TPM_GetTimeOfDay: 1632069482 sec 212615 usec
+      TPM_Nonce_Generate:
+     TPM_Random: Requesting 20 bytes
+    TPM_Global_Init: Initializing TPM_KEY_HANDLE_LIST
+     TPM_KeyHandleEntries_Init:
+    TPM_Global_Init: Initializing TPM_NV_INDEX_ENTRIES
+     TPM_NVIndexEntries_Init:
+      TPM_Global_Init: Set testState to 1 
+     TPM_PermanentAll_NVLoad:
+     TPM_PermanentAll_Load:
+     TPM_PermanentData_Load:
+      TPM_PermanentData_Load: Loading tpmProof
+      TPM_Secret_Load:
+      TPM_Nonce_Load:
+      TPM_PermanentData_Load: Loading ownerAuth 
+      TPM_Secret_Load:
+      TPM_Secret_Load:
+      TPM_Digest_Load:
+      TPM_PermanentData_Load: Load manuMaintPub
+     TPM_Pubkey_Load:
+     TPM_KeyParms_Load:
+      TPM_SizedBuffer_Load:
+      TPM_SizedBuffer_Load:
+      TPM_PermanentData_Load: Load endorsement key
+     TPM_Key_LoadClear:
+     TPM_Key_LoadPubData:
+     TPM_StructVer_Load:
+     TPM_StructVer_CheckVer: version 1.1.0.0
+     TPM_KeyParms_Load:
+      TPM_SizedBuffer_Load:
+      TPM_SizedBuffer_Load:
+      TPM_PermanentData_Load: Load SRK
+     TPM_Key_LoadClear:
+     TPM_Key_LoadPubData:
+     TPM_StructVer_Load:
+     TPM_StructVer_CheckVer: version 1.1.0.0
+     TPM_KeyParms_Load:
+      TPM_SizedBuffer_Load:
+      TPM_SizedBuffer_Load:
+     TPM_PCRInfo_CreateFromBuffer:
+      TPM_SizedBuffer_Load:
+      TPM_PermanentData_Load: Load contextKey
+     TPM_SymmetricKeyData_Load:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 00 00 00 00
+      TPM_PermanentData_Load: Load delegateKey
+     TPM_SymmetricKeyData_Load:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 00 00 00 00
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_CounterValue_Load:
+      TPM_Secret_Load:
+     TPM_PCRAttributes_Init:
+      TPM_PermanentData_Load: Load ordinalAuditStatus
+     TPM_FamilyTable_Load: Qty 16
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_FamilyTableEntry_Load:
+      TPM_FamilyTableEntry_Load: label 00 familyID 00000000 valid 0
+     TPM_DelegateTable_Load: Qty 4
+     TPM_DelegateTableRow_Load:
+     TPM_DelegatePublic_Load:
+     TPM_PCRInfoShort_Load:
+     TPM_PCRSelection_Load:
+     TPM_LocalitySelection_CheckLegal: TPM_LOCALITY_SELECTION 1f
+      TPM_Digest_Load:
+     TPM_Delegations_Load:
+      TPM_Secret_Load:
+     TPM_DelegateTableRow_Load:
+     TPM_DelegatePublic_Load:
+     TPM_PCRInfoShort_Load:
+     TPM_PCRSelection_Load:
+     TPM_LocalitySelection_CheckLegal: TPM_LOCALITY_SELECTION 1f
+      TPM_Digest_Load:
+     TPM_Delegations_Load:
+      TPM_Secret_Load:
+     TPM_DelegateTableRow_Load:
+     TPM_DelegatePublic_Load:
+     TPM_PCRInfoShort_Load:
+     TPM_PCRSelection_Load:
+     TPM_LocalitySelection_CheckLegal: TPM_LOCALITY_SELECTION 1f
+      TPM_Digest_Load:
+     TPM_Delegations_Load:
+      TPM_Secret_Load:
+     TPM_DelegateTableRow_Load:
+     TPM_DelegatePublic_Load:
+     TPM_PCRInfoShort_Load:
+     TPM_PCRSelection_Load:
+     TPM_LocalitySelection_CheckLegal: TPM_LOCALITY_SELECTION 1f
+      TPM_Digest_Load:
+     TPM_Delegations_Load:
+      TPM_Secret_Load:
+      TPM_Nonce_Load:
+      TPM_Nonce_Load:
+      TPM_PermanentData_Load: Loading DAA Blob key
+     TPM_SymmetricKeyData_Load:
+     TPM_SymmetricKeyData_SetKeys:
+      TPM_SymmetricKeyData_SetKeys: userKey 00 00 00 00
+     TPM_PermanentFlags_Load:
+     TPM_PermanentFlags_LoadBitmap:
+     TPM_KeyHandleEntries_OwnerEvictLoad:
+      TPM_KeyHandleEntries_OwnerEvictLoad: Count 0
+     TPM_NVIndexEntries_Load:
+      TPM_PermanentAll_Load: Checking integrity digest
+     TPM_SHA1_Check:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 1149 bytes
+     TPM_SHA1Update: length 1149
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest f8 9f 13 73
+     TPM_SHA1Delete:
+      TPM_Digest_Compare:
+     TPM_VolatileAll_NVLoad:
+    TPM_MainInit: Creating global TPM instance 0
+    TPM_MainInit: Run limited self tests on TPM 0
+     TPM_LimitedSelfTestTPM:
+      TPM_SizedBuffer_Delete:
+      TPM_LimitedSelfTestTPM: Set testState to 1 
+     TPM_Global_Delete:
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+ Ctrl Cmd: length 4
+ 00 00 00 04 
+ Ctrl Rsp: length 8
+ 00 00 00 00 00 00 00 00 
+ Ctrl Cmd: length 8
+ 00 00 00 05 00 00 00 00 
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+ SWTPM_IO_Read: length 12
+ 80 01 00 00 00 0C 00 00 01 44 00 00 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 8001 paramSize 12 ordinal 00000144
+     TPM_Process_Preprocess: Ordinal 00000144
+     TPM_ContinueSelfTestCmd:
+      TPM_ContinueSelfTestCmd: Set testState to 2 
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000144
+    TPM_Process_Unused:
+    TPM_Process_Unused: Ordinal returnCode 0000000a 10
+     TPM_Sbuffer_StoreInitialResponse: returnCode 0000000a
+       TPM_Sbuffer_Append: data_length 2, growing from 0 to 2048
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 0A 
+ SWTPM_IO_Read: length 22
+ 80 01 00 00 00 16 00 00 01 7A 00 00 00 06 00 00 
+ 01 29 00 00 00 01 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 8001 paramSize 22 ordinal 0000017a
+     TPM_Process_Preprocess: Ordinal 0000017a
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 0000017a
+    TPM_Process_Unused:
+    TPM_Process_Unused: Ordinal returnCode 0000000a 10
+     TPM_Sbuffer_StoreInitialResponse: returnCode 0000000a
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 0A 
+ SWTPM_IO_Read: length 22
+ 00 C1 00 00 00 16 00 00 00 65 00 00 00 05 00 00 
+ 00 04 00 00 01 15 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 22 ordinal 00000065
+     TPM_Process_Preprocess: Ordinal 00000065
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000065
+    TPM_Process_GetCapability: Ordinal Entry
+    TPM_Process_GetCapability: capArea 00000005
+      TPM_SizedBuffer_Load:
+     TPM_GetSubCapInt: subCap 00000115
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000020
+    TPM_CheckState: Error, postInitialise is TRUE
+    TPM_Process_GetCapability: Ordinal returnCode 00000026 38
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000026
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000026
+      TPM_SizedBuffer_Delete:
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 26 
+ SWTPM_IO_Read: length 12
+ 00 C1 00 00 00 0C 00 00 00 99 00 01 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 12 ordinal 00000099
+     TPM_Process_Preprocess: Ordinal 00000099
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000099
+    TPM_Process_Startup: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+    TPM_Startup_Clear:
+     TPM_NVIndexEntries_StClear: Clearing 0 slots
+     TPM_StanyFlags_Init:
+     TPM_SaveState_NVDelete:
+    TPM_Process_Startup: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 00 
+ SWTPM_IO_Read: length 22
+ 00 C1 00 00 00 16 00 00 00 65 00 00 00 05 00 00 
+ 00 04 00 00 01 15 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 22 ordinal 00000065
+     TPM_Process_Preprocess: Ordinal 00000065
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000065
+    TPM_Process_GetCapability: Ordinal Entry
+    TPM_Process_GetCapability: capArea 00000005
+      TPM_SizedBuffer_Load:
+     TPM_GetSubCapInt: subCap 00000115
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000020
+    TPM_Process_GetCapability: capArea 00000005 subCap32 subCap16 00000115 0000
+     TPM_GetCapabilityCommon: capArea 00000005
+     TPM_GetCapability_CapProperty: capProperty 00000115
+     TPM_GetCapability_CapProperty: TPM_CAP_PROP_TIS_TIMEOUT
+     TPM_GetCapability_CapPropTisTimeout:
+       TPM_Sbuffer_Append: data_length 4, growing from 0 to 2048
+    TPM_Process_GetCapability: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+      TPM_SizedBuffer_Delete:
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+       TPM_Sbuffer_Append: data_length 30, growing from 10 to 2058
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 10 00 0F 
+ 42 40 00 0F 42 40 00 0F 42 40 00 0F 42 40 
+ SWTPM_IO_Read: length 22
+ 00 C1 00 00 00 16 00 00 00 65 00 00 00 05 00 00 
+ 00 04 00 00 01 20 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 22 ordinal 00000065
+     TPM_Process_Preprocess: Ordinal 00000065
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000065
+    TPM_Process_GetCapability: Ordinal Entry
+    TPM_Process_GetCapability: capArea 00000005
+      TPM_SizedBuffer_Load:
+     TPM_GetSubCapInt: subCap 00000120
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000020
+    TPM_Process_GetCapability: capArea 00000005 subCap32 subCap16 00000120 0000
+     TPM_GetCapabilityCommon: capArea 00000005
+     TPM_GetCapability_CapProperty: capProperty 00000120
+     TPM_GetCapability_CapProperty: TPM_CAP_PROP_DURATION
+     TPM_GetCapability_CapPropDuration:
+       TPM_Sbuffer_Append: data_length 4, growing from 0 to 2048
+    TPM_Process_GetCapability: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+      TPM_SizedBuffer_Delete:
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 26
+ 00 C4 00 00 00 1A 00 00 00 00 00 00 00 0C 02 FA 
+ F0 80 05 F5 E1 00 11 E1 A3 00 
+ SWTPM_IO_Read: length 18
+ 00 C1 00 00 00 12 00 00 00 65 00 00 00 1A 00 00 
+ 00 00 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 18 ordinal 00000065
+     TPM_Process_Preprocess: Ordinal 00000065
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000065
+    TPM_Process_GetCapability: Ordinal Entry
+    TPM_Process_GetCapability: capArea 0000001a
+      TPM_SizedBuffer_Load:
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000020
+    TPM_Process_GetCapability: capArea 0000001a subCap32 subCap16 00000000 0000
+     TPM_GetCapabilityCommon: capArea 0000001a
+     TPM_GetCapability_CapVersionVal:
+     TPM_CapVersionInfo_Set:
+     TPM_Version_Set:
+      TPM_GetCapability_CapVersionVal: specLevel 0002
+      TPM_GetCapability_CapVersionVal: errataRev 03
+      TPM_GetCapability_CapVersionVal: revMajor 12 revMinor 9e
+      TPM_GetCapability_CapVersionVal: tpmVendorID 49 42 4d 00
+     TPM_CapVersionInfo_Store:
+       TPM_Sbuffer_Append: data_length 2, growing from 0 to 2048
+     TPM_Version_Store:
+     TPM_CapVersionInfo_Delete:
+     TPM_CapVersionInfo_Init:
+     TPM_Version_Init:
+    TPM_Process_GetCapability: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+      TPM_SizedBuffer_Delete:
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 29
+ 00 C4 00 00 00 1D 00 00 00 00 00 00 00 0F 00 30 
+ 01 02 12 9E 00 02 03 49 42 4D 00 00 00 
+ SWTPM_IO_Read: length 10
+ 00 C1 00 00 00 0A 00 00 00 53 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 10 ordinal 00000053
+     TPM_Process_Preprocess: Ordinal 00000053
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000053
+    TPM_Process_ContinueSelfTest: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000021
+     TPM_ContinueSelfTestCmd:
+      TPM_ContinueSelfTestCmd: Set testState to 2 
+    TPM_Process_ContinueSelfTest: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 10
+ 00 C4 00 00 00 0A 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 00 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 0
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 46 00 00 00 10 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000046
+     TPM_Process_Preprocess: Ordinal 00000046
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000046
+    TPM_Process_GetRandom: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_GetRandom: bytesRequested 16
+      TPM_SizedBuffer_Allocate: Size 16
+     TPM_Random: Requesting 16 bytes
+    TPM_Process_GetRandom: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_SizedBuffer_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+      TPM_SizedBuffer_Delete:
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 10 DC F0 
+ D6 FA 4B 02 D3 ED 98 24 CD A2 21 A5 30 AD 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 00 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 0
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 01 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 1
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 02 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 2
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 03 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 3
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 04 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 4
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 05 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 5
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 06 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 6
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 14
+ 00 C1 00 00 00 0E 00 00 00 15 00 00 00 07 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 14 ordinal 00000015
+     TPM_Process_Preprocess: Ordinal 00000015
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000015
+    TPM_Process_PcrRead: Ordinal Entry
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 0000002f
+    TPM_Process_PcrRead: pcrIndex 7
+      TPM_Digest_Copy:
+    TPM_Process_PcrRead: PCR value 00 00 00 00
+    TPM_Process_PcrRead: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 00 00 00 00 00 00 
+ 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+ SWTPM_IO_Read: length 34
+ 00 C1 00 00 00 22 00 00 00 14 00 00 00 0A DD EE 
+ 60 04 DC 3B D4 EE 30 04 06 CD 93 18 1C 5A 21 87 
+ B5 9B 
+     TPM_Process_GetCommandParams:
+      TPM_Process_GetCommandParams: tag 00c1 paramSize 34 ordinal 00000014
+     TPM_Process_Preprocess: Ordinal 00000014
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+     TPM_OrdinalTable_GetProcessFunction: Ordinal 00000014
+    TPM_Process_Extend: Ordinal Entry
+      TPM_Digest_Load:
+     TPM_GetInParamDigest:
+      TPM_GetInParamDigest: transportEncrypt 00
+     TPM_CheckState: Check map 00000021
+    TPM_ExtendCommon: pcrNum 10
+     TPM_Locality_Check:
+      TPM_Digest_Copy:
+    TPM_ExtendCommon: Current PCR  00 00 00 00
+    TPM_ExtendCommon: Input Digest dd ee 60 04
+     TPM_SHA1:
+     TPM_SHA1_valist:
+     TPM_SHA1InitCmd:
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+      TPM_SHA1_valist: Digesting 20 bytes
+     TPM_SHA1Update: length 20
+     TPM_SHA1FinalCmd:
+      TPM_SHA1_valist: Digest 09 5d 73 d7
+     TPM_SHA1Delete:
+    TPM_ExtendCommon: New PCR 09 5d 73 d7
+      TPM_Digest_Copy:
+      TPM_Digest_Copy:
+    TPM_Process_Extend: Ordinal returnCode 00000000 0
+     TPM_Sbuffer_StoreInitialResponse: returnCode 00000000
+      TPM_Digest_Store:
+     TPM_GetOutParamDigest:
+     TPM_Sbuffer_StoreFinalResponse: returnCode 00000000
+    TPM_KeyHandleEntries_Trace: 0 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 1 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 2 handle 00000000 tpm_key (nil)
+    TPM_KeyHandleEntries_Trace: 3 handle 00000000 tpm_key (nil)
+    TPM_State_Trace: disable 0 p_deactive 0 v_deactive 0 owned 0 state 2
+ SWTPM_IO_Write: length 30
+ 00 C4 00 00 00 1E 00 00 00 00 09 5D 73 D7 7E 6E 
+ BF 37 76 FE 0A D2 B0 6C B5 9F 00 9E C5 EE 
+ Ctrl Cmd: length 4
+ 00 00 00 03 
+     TPM_Global_Delete:
+      TPM_Global_Delete: Deleting TPM_PERMANENT_DATA
+     TPM_PermanentData_Delete:
+     TPM_Pubkey_Delete:
+     TPM_KeyParms_Delete:
+      TPM_SizedBuffer_Delete:
+     TPM_RSAKeyParms_Delete:
+     TPM_KeyParms_Init:
+      TPM_SizedBuffer_Delete:
+     TPM_Pubkey_Init:
+     TPM_KeyParms_Init:
+     TPM_Key_Delete:
+     TPM_KeyParms_Delete:
+      TPM_SizedBuffer_Delete:
+     TPM_RSAKeyParms_Delete:
+     TPM_KeyParms_Init:
+      TPM_SizedBuffer_Delete:
+     TPM_PCRInfo_Delete:
+     TPM_PCRInfoLong_Delete:
+      TPM_SizedBuffer_Delete:
+      TPM_SizedBuffer_Delete:
+     TPM_StoreAsymkey_Delete:
+     TPM_MigrateAsymkey_Delete:
+     TPM_Key_Init:
+     TPM_StructVer_Init:
+     TPM_KeyParms_Init:
+     TPM_Key_Delete:
+     TPM_KeyParms_Delete:
+      TPM_SizedBuffer_Delete:
+     TPM_RSAKeyParms_Delete:
+     TPM_KeyParms_Init:
+      TPM_SizedBuffer_Delete:
+     TPM_PCRInfo_Delete:
+     TPM_PCRInfoLong_Delete:
+      TPM_SizedBuffer_Delete:
+      TPM_SizedBuffer_Delete:
+     TPM_StoreAsymkey_Delete:
+     TPM_MigrateAsymkey_Delete:
+     TPM_Key_Init:
+     TPM_StructVer_Init:
+     TPM_KeyParms_Init:
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+     TPM_FamilyTable_Delete: Qty 16
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Delete:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTable_Init: Qty 16
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_FamilyTableEntry_Init:
+     TPM_DelegateTable_Delete: Qty 4
+     TPM_DelegateTableRow_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTable_Init: Qty 4
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_DelegateTableRow_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Secret_Init:
+     TPM_SymmetricKeyData_Free:
+     TPM_SymmetricKeyData_Init:
+      TPM_PermanentData_Zero:
+      TPM_Secret_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+      TPM_Nonce_Init:
+      TPM_Global_Delete: Deleting TPM_STCLEAR_DATA
+     TPM_StclearData_Delete:
+     TPM_StclearData_SessionDelete:
+     TPM_StclearData_AuthSessionDelete:
+     TPM_AuthSessions_Delete:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Delete:
+     TPM_DeleteDelegatePublic:
+     TPM_PCRInfoShort_Delete:
+     TPM_PCRSelection_Delete:
+     TPM_PCRSelection_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Delete:
+     TPM_Delegations_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+      TPM_Nonce_Init:
+     TPM_ContextList_Init:
+     TPM_TransportSessions_Delete:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Delete:
+     TPM_TransportPublic_Delete:
+     TPM_TransportPublic_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessions_Delete:
+     TPM_DaaSessionData_Delete:
+     TPM_DAAIssuer_Delete:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Delete:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Delete:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Delete:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessionData_Delete:
+     TPM_DAAIssuer_Delete:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Delete:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Delete:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Delete:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_StclearData_Init:
+      TPM_Nonce_Init:
+    TPM_StclearData_Init: Initializing PCR's
+     TPM_PCRs_Init:
+      TPM_PCR_Init: pcrIndex 0
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 1
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 2
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 3
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 4
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 5
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 6
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 7
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 8
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 9
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 10
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 11
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 12
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 13
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 14
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 15
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 16
+      TPM_Digest_Init:
+      TPM_PCR_Init: pcrIndex 17
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 18
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 19
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 20
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 21
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 22
+      TPM_Digest_Set:
+      TPM_PCR_Init: pcrIndex 23
+      TPM_Digest_Init:
+     TPM_StclearData_SessionInit:
+     TPM_AuthSessions_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_AuthSessionData_Init:
+      TPM_Nonce_Init:
+      TPM_Secret_Init:
+      TPM_Digest_Init:
+     TPM_DelegatePublic_Init:
+     TPM_PCRSelection_Init:
+      TPM_Digest_Init:
+     TPM_Delegations_Init:
+     TPM_TransportSessions_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_TransportInternal_Init:
+      TPM_Secret_Init:
+     TPM_TransportPublic_Init:
+      TPM_Nonce_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessions_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+     TPM_DaaSessionData_Init:
+     TPM_DAAIssuer_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAATpm_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+     TPM_DAAContext_Init:
+      TPM_Digest_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_DAAJoindata_Init:
+      TPM_Digest_Init:
+      TPM_Nonce_Init:
+     TPM_ContextList_Init:
+      TPM_Digest_Init:
+      TPM_Global_Delete: Deleting TPM_STANY_DATA
+     TPM_StanyData_Delete:
+      TPM_Global_Delete: Deleting key handle entries
+     TPM_KeyHandleEntries_Delete:
+      TPM_Global_Delete: Deleting SHA1 contexts
+     TPM_NVIndexEntries_Delete: Deleting from 0 slots
+     TPM_NVIndexEntries_Init:
+ Ctrl Rsp: length 4
+ 00 00 00 00 
+     TPM_Global_Delete:
